@@ -6,14 +6,20 @@ package edu.cnm.deepdive.craps;
 import java.util.Random;
 
 /**
+ * This class implements a multi-round state machine for a solitaire craps
+ * game, with running tally of wins and losses. At each player decision point,
+ * an instance of a functional interface callback used to present the current 
+ * roll, and another functional interface instance is interrogated to determine 
+ * whether play should proceed/continue.
+ *  
  * @author natedaag
- *
  */
 public class MyStateMachine {
   
   public enum PlayState {
     COME_OUT, CONTINUE, DONE;
   }
+  
   
   public enum ComeOutResult {
     NATURAL, CRAP_OUT, POINT;
