@@ -9,13 +9,13 @@ import java.util.Arrays;
  * @author natedaag
  *
  */
-public class ConsoleGame {
+public class MyConsoleGame {
 
   /**
    * @param args
    */
   public static void main(String[] args) {
-    StateMachine croupier = new StateMachine();
+    MyStateMachine croupier = new MyStateMachine();
     croupier.setDisplay((roll) -> {
       System.out.printf("Roll: %s%n", Arrays.toString(roll));
     });

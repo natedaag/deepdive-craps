@@ -9,7 +9,7 @@ import java.util.Random;
  * @author natedaag
  *
  */
-public class StateMachine {
+public class MyStateMachine {
   
   public enum PlayState {
     COME_OUT, CONTINUE, DONE;
