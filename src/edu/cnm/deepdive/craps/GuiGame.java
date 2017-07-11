@@ -64,7 +64,7 @@ public class GuiGame
     JFrame frame = new JFrame("Simple Time-Wasting Craps Game");
     JPanel dicePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
     JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-    JPanel textPanel = new JPanel(new GridLayout(1, 4));
+    JPanel textPanel = new JPanel(new GridLayout(2, 2));
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setLayout(new BorderLayout());
     dieFaces = new ImageIcon[6];
@@ -103,9 +103,9 @@ public class GuiGame
     point.setVisible(false);
     roll.setVisible(false);
     textPanel.add(wins);
+    textPanel.add(roll);
     textPanel.add(losses);
     textPanel.add(point);
-    textPanel.add(roll);
     frame.add(dicePanel, BorderLayout.NORTH);
     frame.add(textPanel, BorderLayout.CENTER);
     frame.add(buttonPanel, BorderLayout.SOUTH);
@@ -223,9 +223,6 @@ public class GuiGame
     stopClicked = true;
     notify();
   }
-  
-  
-  
 }
 
 
