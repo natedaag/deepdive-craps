@@ -28,8 +28,8 @@ public class GuiGame
   private static final String ROLL_FORMAT = "Roll = %d";
   
   private ImageIcon[] dieFaces;
-  private JButton roll1;
-  private JButton roll2;
+  private JLabel roll1;
+  private JLabel roll2;
   private JButton play;
   private JButton stop;
   private JLabel wins;
@@ -71,15 +71,14 @@ public class GuiGame
     for (int i = 0; i < 6; i++) {
       dieFaces[i] = createImageIcon(String.format("images/%d.png", i + 1));
     }
-    roll1 = new JButton(dieFaces[5]);
-    roll2 = new JButton(dieFaces[5]);
+    roll1 = new JLabel(dieFaces[5]);
+    roll2 = new JLabel(dieFaces[5]);
     roll1.setEnabled(false);
     roll2.setEnabled(false);
     dicePanel.add(roll1);
     dicePanel.add(roll2);
     play = new JButton("Roll!");
     stop = new JButton("Stop!");
-    disableButtons(); 
     play.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent evt) {
